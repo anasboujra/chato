@@ -266,6 +266,13 @@
               border-radius: 50%;
               object-fit: cover;
             }
+
+            .time {
+              display: flex;
+              flex-direction: column;
+              font-size: 9px;
+              align-items: center;
+            }
           }
 
           .messageContent {

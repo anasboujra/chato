@@ -26,7 +26,16 @@ const Message = ({ message }) => {
           }
           alt=""
         />
-        <span>just now</span>
+        <div className="time">
+          <span>
+            {new Date(message.date.seconds * 1000).toLocaleDateString("fr-FR")}{" "}
+          </span>
+          <span>
+            {new Date(message.date.seconds * 1000)
+              .toLocaleTimeString("fr-FR")
+              .substring(0, 5)}
+          </span>
+        </div>
       </div>
       <div className="messageContent">
         {!message.img && <p>{message.text}</p>}
